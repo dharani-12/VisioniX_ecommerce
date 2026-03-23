@@ -882,3 +882,26 @@ will-change: transform;
     font-size: 1rem;
     outline: none;
 }
+
+@media(max-width:480px){
+    .newsletter-card {
+    padding: 20px;
+}
+
+.newsletter-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+
+}
+} 

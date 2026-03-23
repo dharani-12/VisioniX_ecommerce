@@ -1,0 +1,316 @@
+.about-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text);
+    background: url("../images/hero-about.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle, rgba(82, 67, 20, 0.575), transparent 70%);
+}
+
+.about-hero-content {
+    position: relative;
+    padding: 3rem;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    color: var();
+}
+
+.about-hero span {
+    background: linear-gradient(45deg, #FFD700, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.our-story{
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.story-image img {
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+}
+
+.subtitle {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.story-text h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    color: var(--primary-hover);
+}
+
+.story-text p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.status{
+    background-color: var(--card);
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: center;
+    gap: 2rem;
+}
+
+.stat {
+    padding: 20px;
+    border-radius: 12px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.stat:hover {
+
+    background: rgba(212, 175, 55, 0.05);
+    box-shadow: var(--shadow);
+}
+
+.stat h2 {
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+.stat:hover h2 {
+    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat p {
+  font-size: 1.1rem;
+  color: var(--text);
+  text-transform: uppercase;
+  font-weight: 600;
+  /* letter-spacing: 1px; */
+}
+
+@media (max-width: 600px) {
+  .stat:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+  }
+}
+
+.section{
+    background: linear-gradient(var(--bg), var(--card));
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-hover);
+}
+
+.section-header p {
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: box-shadow 0.3s ease background-color 0.3s ease;
+}
+
+.value-card:hover {
+    background-color: rgba(212, 175, 55, 0.301);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.founder {
+    background: transparent;
+}
+
+.founder-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+}
+
+.dark .founder-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.founder-box h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.founder-box p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: var(--text);
+    opacity: 0.9;
+}
+
+.founder-box h4 {
+    margin-top: 2rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* The "Reflective Sheen" Effect */
+.founder-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.team-socials {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(212, 175, 55, 0.308); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-socials a {
+    color: white;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.team-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 24px;
+    text-align: center;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-card:hover {
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: var(--shadow);
+}
+
+.team-card img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid transparent;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.team-card h3 {
+    color: var(--text);
+    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+}
+
+.team-card span {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+}

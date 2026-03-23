@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Visionix Eyewear</title>
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div id="navbar" class="navbar-sticky"></div>
+
+    <section class="shop-page section">
+
+        <div class="container">
+
+            <div class="shop-layout">
+                <!-- Sidebar Filters -->
+                <aside class="shop-sidebar">
+
+                    <button class="filter-close" id="filter-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <ul class="filter-list" id="category-filters">
+                            <li><label><input type="checkbox" value="men"> Men</label></li>
+                            <li><label><input type="checkbox" value="women"> Women</label></li>
+                            <li><label><input type="checkbox" value="kids"> Kids</label></li>
+                            <li><label><input type="checkbox" value="prescription"> Prescription</label></li>
+                            <li><label><input type="checkbox" value="sunglasses"> Sunglasses</label></li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <input type="range" id="price-range" min="0" max="20000" step="500" value="20000">
+                        <div class="price-labels">
+                            <span>₹0</span>
+                            <span id="price-value">₹20,000</span>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Material</h4>
+                        <ul class="filter-list" id="material-filters">
+                            <li><label><input type="checkbox" value="Titanium"> Titanium</label></li>
+                            <li><label><input type="checkbox" value="Acetate"> Acetate</label></li>
+                            <li><label><input type="checkbox" value="Metal"> Metal</label></li>
+                            <li><label><input type="checkbox" value="Plastic"> Plastic</label></li>
+                        </ul>
+                    </div>
+                    <button id="clear-filters" class="btn btn-outline mt-10">Clear Filters</button>
+                </aside>
+
+                <!-- Product Display -->
+                <main class="shop-main">
+                    <div class="shop-header">
+                        <h2 id="shop-title">All Products</h2>
+
+                        <div class="shop-controls">
+
+                            <button class="filter-toggle-btn" id="filter-toggle">
+                                <i class="fas fa-filter"></i> Filters
+                            </button>
+
+                            <select id="sort-by">
+                                <option value="default">Sort by: Default</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-grid" id="shop-products">
+                        <!-- product loaded -->
+                    </div>
+                </main>
+            </div>
+
+            <div class="filter-overlay" id="filter-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo"> VisioniX<span>&reg;</span></a>
+
+                <p>
+                    Premium eyewear crafted for clarity, comfort, and modern style.
+                    See the world better with Visionix.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Categories -->
+            <div class="footer-links">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="shop.html?cat=men">Men's Eyewear</a></li>
+                    <li><a href="shop.html?cat=women">Women's Eyewear</a></li>
+                    <li><a href="shop.html?cat=kids">Kids Collection</a></li>
+                    <li><a href="shop.html?cat=sunglasses">Sunglasses</a></li>
+                    <li><a href="shop.html?cat=prescription">Prescription</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Customer Service -->
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="service.html">Shipping Policy</a></li>
+                    <li><a href="service.html">Return Policy</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="service.html">Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Vision St, Eye City</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:support@visionix.com">support@visionix.com</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+
+            <div class="badge-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Secure Payment</span>
+            </div>
+
+            <div class="badge-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Free Shipping</span>
+            </div>
+
+            <div class="badge-item">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>30 Day Returns</span>
+            </div>
+
+            <div class="badge-item">
+                <i class="fa-solid fa-headset"></i>
+                <span>24/7 Support</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- Payment Icons -->
+        <div class="payment-icons">
+
+            <span>We Accept</span>
+
+            <div class="payment-list">
+
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-apple-pay"></i>
+                <i class="fa-brands fa-cc-amazon-pay"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Visionix Eyewear. All rights reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="/scripts/navfooter.js"></script>
+    <script src="/scripts/auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./scripts/home.js"></script>
+    <script src="./scripts/shop.js"></script>
+
+</body>
+
+</html>

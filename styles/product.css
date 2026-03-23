@@ -1,0 +1,77 @@
+/* Product Details Page Styles */
+.product-details-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 50px;
+  align-items: start;
+}
+
+.product-gallery{
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.product-gallery img { 
+  
+  width: 100%; 
+  border-radius: 20px; 
+  background: var(--card); 
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.product-gallery img:hover { 
+  transform: scale(1.05); 
+  box-shadow: var(--shadow-hover);
+}
+
+.product-info-detailed h1 { 
+  font-size: 2.5rem; 
+  margin-bottom: 10px; 
+}
+
+.product-meta { 
+  display: flex; 
+  gap: 20px; 
+  color: var(--text-muted); 
+  margin-bottom: 20px; 
+}
+
+.product-price-large { 
+  font-size: 2rem; 
+  font-weight: 700; 
+  color: var(--primary); 
+  margin-bottom: 30px; 
+}
+
+.product-specs { 
+  margin-bottom: 30px; 
+}
+
+.spec-item { 
+  margin-bottom: 10px; 
+}
+
+.spec-item strong { 
+  color: var(--text); 
+}
+
+.prescription-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 15px; 
+  margin-top: 15px; 
+}
+
+@media (max-width: 768px) {
+  .product-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-gallery {
+    position: static;
+
+  }
+}
